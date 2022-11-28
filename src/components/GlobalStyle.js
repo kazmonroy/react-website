@@ -46,6 +46,8 @@ const GlobalStyle = createGlobalStyle`
         color: var(--second-color)
     }
 
+ 
+
    
 `;
 

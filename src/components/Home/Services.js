@@ -32,7 +32,7 @@ const Services = () => {
 };
 
 const ServiceSection = styled(HeroSection)`
-  padding: 0px 80px;
+  padding: 0px 40px;
   display: flex;
 `;
 
