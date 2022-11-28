@@ -1,6 +1,8 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
+const port = process.env.PORT || 3000;
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -44,5 +46,11 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  devServer: {
+    host: 'localhost',
+    port: port,
+    historyApiFallback: true,
+    open: true,
   },
 };

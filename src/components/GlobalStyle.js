@@ -17,8 +17,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
         background: var(--base-color);
         color: var(--third-color);
-        width: 100vw;
-       
     }
 
     button {
@@ -31,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         font-family: inherit;
         font-weight: bold;
+        font-size: 1rem;
 
         &:hover {
             background: var(--second-color);
@@ -42,13 +41,12 @@ const GlobalStyle = createGlobalStyle`
         font-size: 3rem
     }
 
+
     span {
         color: var(--second-color)
     }
 
- 
 
-   
 `;
 
 export default GlobalStyle;

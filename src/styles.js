@@ -5,12 +5,12 @@ export const HeroSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 40px;
+  padding: 0px 96px;
 `;
 
 export const Description = styled.div`
   flex: 1;
-  padding: 0px 40px;
+  padding: 0px 40px 0px 0px;
 
   p {
     padding: 24px 24px 24px 0px;
