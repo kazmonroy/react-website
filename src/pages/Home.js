@@ -3,17 +3,24 @@ import Hero from '../components/Home/Hero';
 import Services from '../components/Home/Services';
 import FAQ from '../components/Home/FAQ';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animations';
 
 const Home = () => {
   return (
-    <HomeSection>
+    <motion.div
+      variants={pageAnimation}
+      initial='hidden'
+      animate='show'
+      exit='exit'
+    >
       <Hero />
       <Services />
       <FAQ />
-    </HomeSection>
+    </motion.div>
   );
 };
 
-const HomeSection = styled.section``;
+// const HomeSection = styled.section``;
 
 export default Home;

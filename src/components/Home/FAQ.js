@@ -1,7 +1,8 @@
 import React from 'react';
 import Question from './Question';
 import styled from 'styled-components';
-import { HeroSection, Image } from '../../styles.js';
+import { HeroSection } from '../../styles.js';
+import { motion, LayoutGroup } from 'framer-motion';
 
 const FAQ = () => {
   return (
@@ -9,10 +10,12 @@ const FAQ = () => {
       <h2>FAQs</h2>
 
       <Questions>
-        <Question question='How do I start?' />
-        <Question question='Daily schedule' />
-        <Question question='What products do you offer?' />
-        <Question question='Different payment methods' />
+        <LayoutGroup>
+          <Question question='How do I start?' />
+          <Question question='Daily schedule' />
+          <Question question='What products do you offer?' />
+          <Question question='Different payment methods' />
+        </LayoutGroup>
       </Questions>
     </FaqSection>
   );
@@ -20,6 +23,7 @@ const FAQ = () => {
 const FaqSection = styled(HeroSection)`
   display: inline-block;
   width: 100%;
+  margin-top: 40px;
 
   h2 {
     color: var(--second-color);

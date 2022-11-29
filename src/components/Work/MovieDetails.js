@@ -22,7 +22,7 @@ const MovieDetails = () => {
       {movie && (
         <StyledMovieDetails>
           <Headline>
-            <h2>{movie.title}</h2>
+            <h2 style={{ color: 'white' }}>{movie.title}</h2>
             <img src={movie.mainImg} alt='' />
           </Headline>
           <Awards>
@@ -75,11 +75,11 @@ const Awards = styled.div`
 `;
 
 const ImageDisplay = styled.div`
-  min-height: 50vh;
+  max-height: 50vh;
 
   img {
     width: 100%;
-    max-height: 70vh;
+    height: 70vh;
     object-fit: cover;
   }
 `;

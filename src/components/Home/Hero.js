@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HeroSection, Description, Image, Hide } from '../../styles.js';
+import { titleAnimation, fade, imgAnim, spanAnim } from '../../animations';
+import Wave from './Wave';
 
 const Hero = () => {
   return (
@@ -11,29 +13,36 @@ const Hero = () => {
       <Description>
         <motion.div className='title'>
           <Hide>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>
-              your <span>dreams</span> come
+            <motion.h2 variants={titleAnimation}>
+              your <motion.span variants={spanAnim}>dreams</motion.span> come
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>true</motion.h2>
+            <motion.h2 variants={titleAnimation}>true</motion.h2>
           </Hide>
         </motion.div>
 
-        <p>
+        <motion.p variants={fade}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
           consectetur.
-        </p>
+        </motion.p>
         <Link to='/contact'>
-          <button>Contact us</button>
+          <motion.button variants={fade}>Contact us</motion.button>
         </Link>
       </Description>
       <Image>
-        <img src={heroImg} alt='' />
+        <motion.img
+          variants={imgAnim}
+          initial='hidden'
+          animate='show'
+          src={heroImg}
+          alt=''
+        />
       </Image>
+      <Wave />
     </HeroSection>
   );
 };

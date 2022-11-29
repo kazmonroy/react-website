@@ -13,13 +13,14 @@ import { HeroSection, Image } from '../../styles.js';
 const Services = () => {
   return (
     <ServiceSection>
-      <Image>
-        <img src={serviceImg} alt='' />
-      </Image>
+      <h2>
+        High <span>quality</span> services
+      </h2>
       <ServicesContent>
-        <h2>
-          High <span>quality</span> services
-        </h2>
+        <Image>
+          <img src={serviceImg} alt='' />
+        </Image>
+
         <Cards>
           <ServicesCard icon={faClock} title='Efficient' />
           <ServicesCard icon={faCreditCard} title='Affordable' />
@@ -33,20 +34,33 @@ const Services = () => {
 
 const ServiceSection = styled(HeroSection)`
   display: flex;
+  flex-direction: column;
+  height: 95vh;
+  margin: 40px 0px;
+
+  h2 {
+    display: inline-block;
+    margin: 40px 0px;
+    padding: 24px 0px;
+  }
 `;
 
 const ServicesContent = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  img {
+    height: 500px;
+  }
 `;
 
 const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 16px;
+  align-content: center;
+  justify-items: center;
+  padding: 0px 32px;
 `;
 
 export default Services;

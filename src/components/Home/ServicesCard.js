@@ -17,7 +17,7 @@ const Card = ({ icon, title }) => {
 const EachCard = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  /* padding: 40px; */
 
   .icon {
     display: flex;

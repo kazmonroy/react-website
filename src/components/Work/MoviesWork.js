@@ -5,11 +5,13 @@ import theAthlete from '../../img/athlete-small.png';
 import theRacer from '../../img/theracer-small.png';
 import theGoodTimes from '../../img/goodtimes-small.png';
 import Movie from './Movie';
+import { motion } from 'framer-motion';
+import { fade } from '../../animations';
 
 const MoviesWork = () => {
   return (
     <Movies>
-      <h1>Our Work</h1>
+      <motion.h1 variants={fade}>Our Work</motion.h1>
       <Movie imgSrc={theAthlete} title='The Athlete' to='/work/the-athlete' />
       <Movie imgSrc={theRacer} title='The Racer' to='/work/the-racer' />
       <Movie

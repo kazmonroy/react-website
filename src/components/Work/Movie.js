@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { fade, imgAnim, lineAnim } from '../../animations';
 
 const Movie = ({ imgSrc, title, to }) => {
   return (
     <StyledMovie>
-      <h2>{title}</h2>
-      <div className='line'></div>
+      <motion.h2 variants={fade}>{title}</motion.h2>
+      <motion.div variants={lineAnim} className='line'></motion.div>
       <Link to={to}>
-        <img src={imgSrc} alt='' />
+        <motion.img variants={imgAnim} src={imgSrc} alt='' />
       </Link>
     </StyledMovie>
   );
@@ -20,7 +22,7 @@ const StyledMovie = styled.section`
   .line {
     width: 100%;
     height: 2px;
-    background-color: var(--third-color);
+    background-color: var(--second-color);
     margin-bottom: 24px;
   }
 
