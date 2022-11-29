@@ -1,10 +1,15 @@
 import React from 'react';
-import Work from '../components/Work/Work';
+import { Routes, Route } from 'react-router-dom';
+import MoviesWork from '../components/Work/MoviesWork';
+import MovieDetails from '../components/Work/MovieDetails';
 
 const OurWork = () => {
   return (
     <div>
-      <Work />
+      <Routes>
+        <Route path='/' element={<MoviesWork />} />
+        <Route path=':id' element={<MovieDetails />} />
+      </Routes>
     </div>
   );
 };

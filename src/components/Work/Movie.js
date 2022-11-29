@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Movie = ({ imgSrc, title }) => {
+const Movie = ({ imgSrc, title, to }) => {
   return (
     <StyledMovie>
       <h2>{title}</h2>
       <div className='line'></div>
-      <Link>
+      <Link to={to}>
         <img src={imgSrc} alt='' />
       </Link>
     </StyledMovie>

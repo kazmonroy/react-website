@@ -5,18 +5,23 @@ import theAthlete from '../../img/athlete-small.png';
 import theRacer from '../../img/theracer-small.png';
 import theGoodTimes from '../../img/goodtimes-small.png';
 import Movie from './Movie';
-const Work = () => {
+
+const MoviesWork = () => {
   return (
-    <WorkSection>
+    <Movies>
       <h1>Our Work</h1>
-      <Movie imgSrc={theAthlete} title='The Athlete' />
-      <Movie imgSrc={theRacer} title='The Racer' />
-      <Movie imgSrc={theGoodTimes} title='The Good Times' />
-    </WorkSection>
+      <Movie imgSrc={theAthlete} title='The Athlete' to='/work/the-athlete' />
+      <Movie imgSrc={theRacer} title='The Racer' to='/work/the-racer' />
+      <Movie
+        imgSrc={theGoodTimes}
+        title='The Good Times'
+        to='/work/good-times'
+      />
+    </Movies>
   );
 };
 
-const WorkSection = styled.section`
+const Movies = styled.section`
   min-height: 100vh;
   padding: 40px 96px;
   overflow: hidden;
@@ -27,4 +32,4 @@ const WorkSection = styled.section`
   }
 `;
 
-export default Work;
+export default MoviesWork;
