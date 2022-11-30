@@ -14,30 +14,9 @@ const Nav = () => {
         <Link to='/'>Capture</Link>
       </Logo>
       <ul>
-        <li>
-          <Link to='/'>About</Link>
-          <HoverUnderline
-            transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
-            animate={{ width: pathname === '/' ? '70%' : '0%' }}
-          ></HoverUnderline>
-        </li>
-        <li>
-          <Link to='/work'>Work</Link>
-          <HoverUnderline
-            transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
-            animate={{ width: pathname === '/work' ? '70%' : '0%' }}
-          ></HoverUnderline>
-        </li>
-        <li>
-          <Link to='/contact'>Contact</Link>
-          <HoverUnderline
-            transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
-            animate={{ width: pathname === '/contact' ? '70%' : '0%' }}
-          ></HoverUnderline>
-        </li>
+        <NavLink to='/' link='About' pathname={pathname} />
+        <NavLink to='/work' link='Work' pathname={pathname} />
+        <NavLink to='/contact' link='Contact' pathname={pathname} />
       </ul>
     </StyledNav>
   );

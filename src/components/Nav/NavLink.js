@@ -2,16 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
 
-const NavLink = ({ link }) => {
+const NavLink = ({ to, link, pathname }) => {
   return (
     <li>
-      <Link to='/'>{link}</Link>
+      <Link to={to}>{link}</Link>
       <HoverUnderline
         transition={{ duration: 0.75 }}
         initial={{ width: '0%' }}
-        animate={{ width: pathname === '/' ? '80%' : '0%' }}
+        animate={{ width: pathname === to ? '80%' : '0%' }}
       ></HoverUnderline>
     </li>
   );
