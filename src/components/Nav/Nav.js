@@ -1,8 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
+import NavLink from './NavLink';
 
 const Nav = () => {
+  const { pathname } = useLocation();
+
   return (
     <StyledNav>
       <Logo>
@@ -11,12 +16,27 @@ const Nav = () => {
       <ul>
         <li>
           <Link to='/'>About</Link>
+          <HoverUnderline
+            transition={{ duration: 0.75 }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/' ? '70%' : '0%' }}
+          ></HoverUnderline>
         </li>
         <li>
           <Link to='/work'>Work</Link>
+          <HoverUnderline
+            transition={{ duration: 0.75 }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/work' ? '70%' : '0%' }}
+          ></HoverUnderline>
         </li>
         <li>
           <Link to='/contact'>Contact</Link>
+          <HoverUnderline
+            transition={{ duration: 0.75 }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/contact' ? '70%' : '0%' }}
+          ></HoverUnderline>
         </li>
       </ul>
     </StyledNav>
@@ -65,6 +85,15 @@ const Logo = styled.div`
     letter-spacing: 4px;
     font-size: 1.5rem;
   }
+`;
+
+const HoverUnderline = styled(motion.div)`
+  height: 2px;
+  width: 0%;
+  background: var(--second-color);
+  position: absolute;
+  bottom: -5px;
+  left: 20%;
 `;
 
 export default Nav;
