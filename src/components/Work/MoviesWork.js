@@ -35,6 +35,10 @@ const Movies = styled(motion.section)`
     font-size: 2.5rem;
     text-align: center;
   }
+
+  @media (max-width: 650px) {
+    padding: 40px;
+  }
 `;
 
 export default MoviesWork;

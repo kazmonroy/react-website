@@ -29,8 +29,6 @@ export const titleAnimation = {
     transition: {
       duration: 0.75,
       ease: 'easeOut',
-      when: 'beforeChildren',
-      staggerChildren: 0.25,
     },
   },
 };

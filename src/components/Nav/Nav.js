@@ -10,13 +10,13 @@ const Nav = () => {
       </Logo>
       <ul>
         <li>
-          <Link to='/'>About us</Link>
+          <Link to='/'>About</Link>
         </li>
         <li>
-          <Link to='/work'>Our work</Link>
+          <Link to='/work'>Work</Link>
         </li>
         <li>
-          <Link to='/contact'>Contact us</Link>
+          <Link to='/contact'>Contact</Link>
         </li>
       </ul>
     </StyledNav>
@@ -25,11 +25,15 @@ const Nav = () => {
 
 const StyledNav = styled.nav`
   min-height: 10vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   padding: 0px 96px;
   font-size: 1rem;
   background-color: #2c2c2c;
+  position: sticky;
+  top: 0;
+  z-index: 4;
 
   a {
     color: var(--third-color);
@@ -45,6 +49,10 @@ const StyledNav = styled.nav`
       padding: 0px 16px;
       position: relative;
     }
+  }
+
+  @media (max-width: 650px) {
+    padding: 0px 16px;
   }
 `;
 

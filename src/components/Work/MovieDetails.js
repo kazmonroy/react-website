@@ -72,6 +72,11 @@ const Awards = styled.div`
   display: flex;
   min-width: 50vh;
   padding: 96px;
+
+  @media (max-width: 650px) {
+    padding: 24px;
+    flex-direction: column;
+  }
 `;
 
 const ImageDisplay = styled.div`

@@ -38,6 +38,12 @@ const StyledMovie = styled(motion.div)`
     max-height: 70vh;
     object-fit: cover;
   }
+
+  @media (max-width: 1300px) {
+    h2 {
+      text-align: center;
+    }
+  }
 `;
 
 export default Movie;

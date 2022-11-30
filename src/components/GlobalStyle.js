@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box
     }
+
+
 
     :root {
         --base-color: #1b1b1b;
@@ -17,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
         background: var(--base-color);
         color: var(--third-color);
+        overflow-x: hidden;
     }
 
     button {

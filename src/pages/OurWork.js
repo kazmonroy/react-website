@@ -5,6 +5,7 @@ import MovieDetails from '../components/Work/MovieDetails';
 import { motion } from 'framer-motion';
 import { pageAnimation, slider, sliderContainer } from '../utils/animations';
 import styled from 'styled-components';
+import ScrollTop from '../utils/ScrollTop';
 
 const OurWork = () => {
   return (
@@ -15,6 +16,7 @@ const OurWork = () => {
       exit='exit'
       style={{ background: 'white', color: '#313131' }}
     >
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>

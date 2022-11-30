@@ -31,11 +31,16 @@ const FAQ = () => {
 };
 const FaqSection = styled(HeroSection)`
   display: inline-block;
-  width: 100%;
+  width: 100vw;
   margin-top: 40px;
 
   h2 {
     color: var(--second-color);
+  }
+
+  @media (max-width: 1300px) {
+    text-align: center;
+    padding: 0px 40px;
   }
 `;
 
@@ -53,6 +58,12 @@ const Questions = styled.div`
       height: 2px;
       margin: 16px 0px;
       width: 100%;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .question h3 {
+      font-size: 1.5rem;
     }
   }
 `;

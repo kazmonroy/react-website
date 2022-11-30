@@ -5,6 +5,7 @@ import FAQ from '../components/Home/FAQ';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../utils/animations';
+import ScrollTop from '../utils/ScrollTop';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       animate='show'
       exit='exit'
     >
+      <ScrollTop />
       <Hero />
       <Services />
       <FAQ />

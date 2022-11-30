@@ -21,13 +21,14 @@ const Services = () => {
       initial='hidden'
       ref={element}
     >
-      <h2>
-        High <span>quality</span> services
-      </h2>
+      <Image>
+        <img src={serviceImg} alt='' />
+      </Image>
+
       <ServicesContent>
-        <Image>
-          <img src={serviceImg} alt='' />
-        </Image>
+        <h2>
+          High <span>quality</span> services
+        </h2>
 
         <Cards>
           <ServicesCard icon={faClock} title='Efficient' />
@@ -42,33 +43,38 @@ const Services = () => {
 
 const ServiceSection = styled(HeroSection)`
   display: flex;
-  flex-direction: column;
-  height: 95vh;
+  min-height: 95vh;
   margin: 40px 0px;
 
-  h2 {
-    display: inline-block;
-    margin: 40px 0px;
-    padding: 24px 0px;
+  @media (max-width: 1300px) {
+    flex-direction: column;
   }
 `;
 
 const ServicesContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0px 40px;
+  justify-content: center;
 
-  img {
-    height: 500px;
+  h2 {
+    display: inline-block;
+    padding: 24px 0px;
+    text-align: center;
+  }
+
+  @media (max-width: 450px) {
+    padding: 0px 0px;
   }
 `;
 
 const Cards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
-  gap: 16px;
-  align-content: center;
-  justify-items: center;
-  padding: 0px 32px;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Services;

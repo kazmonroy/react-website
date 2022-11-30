@@ -17,7 +17,13 @@ const Card = ({ icon, title }) => {
 const EachCard = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding: 40px; */
+  flex: 1 100px 150px;
+  padding: 24px;
+
+  @media (max-width: 650px) {
+    padding: 16px;
+    flex: 1;
+  }
 
   .icon {
     display: flex;
