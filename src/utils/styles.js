@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const HeroSection = styled.section`
+export const HeroSection = styled(motion.section)`
   min-height: 90vh;
   display: flex;
   align-items: center;

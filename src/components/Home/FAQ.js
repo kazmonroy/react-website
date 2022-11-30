@@ -1,12 +1,21 @@
 import React from 'react';
 import Question from './Question';
 import styled from 'styled-components';
-import { HeroSection } from '../../styles.js';
+import { HeroSection } from '../../utils/styles.js';
 import { motion, LayoutGroup } from 'framer-motion';
+import { fade } from '../../utils/animations';
+import { useScroll } from '../../utils/useScroll';
 
 const FAQ = () => {
+  const [controls, element] = useScroll();
+
   return (
-    <FaqSection>
+    <FaqSection
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+    >
       <h2>FAQs</h2>
 
       <Questions>

@@ -8,11 +8,19 @@ import {
   faPeopleGroup,
 } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
-import { HeroSection, Image } from '../../styles.js';
+import { HeroSection, Image } from '../../utils/styles.js';
+import { fade } from '../../utils/animations';
+import { useScroll } from '../../utils/useScroll';
 
 const Services = () => {
+  const [controls, element] = useScroll();
   return (
-    <ServiceSection>
+    <ServiceSection
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+      ref={element}
+    >
       <h2>
         High <span>quality</span> services
       </h2>

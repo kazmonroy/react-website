@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import MoviesWork from '../components/Work/MoviesWork';
 import MovieDetails from '../components/Work/MovieDetails';
 import { motion } from 'framer-motion';
-import { pageAnimation, slider, sliderContainer } from '../animations';
+import { pageAnimation, slider, sliderContainer } from '../utils/animations';
 import styled from 'styled-components';
 
 const OurWork = () => {

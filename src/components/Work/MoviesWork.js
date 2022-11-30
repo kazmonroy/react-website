@@ -6,9 +6,12 @@ import theRacer from '../../img/theracer-small.png';
 import theGoodTimes from '../../img/goodtimes-small.png';
 import Movie from './Movie';
 import { motion } from 'framer-motion';
-import { fade } from '../../animations';
+import { fade } from '../../utils/animations';
+import { useScroll } from '../../utils/useScroll';
 
 const MoviesWork = () => {
+  const [controls, element] = useScroll();
+
   return (
     <Movies>
       <motion.h1 variants={fade}>Our Work</motion.h1>
@@ -23,7 +26,7 @@ const MoviesWork = () => {
   );
 };
 
-const Movies = styled.section`
+const Movies = styled(motion.section)`
   min-height: 100vh;
   padding: 40px 96px;
   overflow: hidden;

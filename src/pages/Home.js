@@ -4,7 +4,7 @@ import Services from '../components/Home/Services';
 import FAQ from '../components/Home/FAQ';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../animations';
+import { pageAnimation } from '../utils/animations';
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
-import { MovieData } from '../../movieData';
+import { MovieData } from '../../utils/movieData';
 import Award from './Award';
 
 const MovieDetails = () => {

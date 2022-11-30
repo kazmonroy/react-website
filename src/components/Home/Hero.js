@@ -3,8 +3,13 @@ import heroImg from '../../img/home1.png';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { HeroSection, Description, Image, Hide } from '../../styles.js';
-import { titleAnimation, fade, imgAnim, spanAnim } from '../../animations';
+import { HeroSection, Description, Image, Hide } from '../../utils/styles.js';
+import {
+  titleAnimation,
+  fade,
+  imgAnim,
+  spanAnim,
+} from '../../utils/animations';
 import Wave from './Wave';
 
 const Hero = () => {

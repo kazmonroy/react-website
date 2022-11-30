@@ -2,21 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { fade, imgAnim, lineAnim } from '../../animations';
+import { fade, imgAnim, lineAnim } from '../../utils/animations';
+import { useScroll } from '../../utils/useScroll';
 
 const Movie = ({ imgSrc, title, to }) => {
+  const [controls, element] = useScroll();
   return (
-    <StyledMovie>
+    <StyledMovie
+      ref={element}
+      variants={fade}
+      animate={controls}
+      initial='hidden'
+    >
       <motion.h2 variants={fade}>{title}</motion.h2>
       <motion.div variants={lineAnim} className='line'></motion.div>
       <Link to={to}>
-        <motion.img variants={imgAnim} src={imgSrc} alt='' />
+        <motion.img src={imgSrc} alt='' />
       </Link>
     </StyledMovie>
   );
 };
 
-const StyledMovie = styled.section`
+const StyledMovie = styled(motion.div)`
   padding: 40px 0px;
 
   .line {

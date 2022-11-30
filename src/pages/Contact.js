@@ -1,5 +1,5 @@
 import React from 'react';
-import { pageAnimation } from '../animations';
+import { pageAnimation } from '../utils/animations';
 import { motion } from 'framer-motion';
 
 const ContactUs = () => {
