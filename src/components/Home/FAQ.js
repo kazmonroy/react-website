@@ -41,6 +41,7 @@ const FaqSection = styled(HeroSection)`
   @media (max-width: 1300px) {
     text-align: center;
     padding: 0px 40px;
+    margin: 0px;
   }
 `;
 
